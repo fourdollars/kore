@@ -547,5 +547,5 @@ worker_unlock(void)
 {
 	accept_lock->current = 0;
 	if (!__sync_bool_compare_and_swap(&(accept_lock->lock), 1, 0))
-		kore_log(LOG_NOTICE, "worker_unlock(): wasnt locked");
+		kore_log(LOG_NOTICE, "worker_unlock(): wasn't locked");
 }
